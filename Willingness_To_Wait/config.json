@@ -1,0 +1,19 @@
+{
+    "cognitive_atlas_task_id": "trm_569989ef8cff4",
+    "instructions":"Respond to the stimuli on the screen.",
+    "description":"Expfactory experiment",
+    "url":"https://www.github.com/expfactory-experiments/willingness-to-wait",
+    "contributors": [
+        "Ian Eisenberg",
+        "Zeynep Enkavi",
+        "Patrick Bissett",
+        "Vanessa Sochat",
+        "Russell Poldrack"
+    ],
+    "exp_id": "willingness-to-wait",
+    "name": "Willingness to Wait",
+    "publish": "True",
+    "reference": ["http://www.nature.com/neuro/journal/v18/n5/full/nn.3994.html"],
+    "template": "jspsych",
+    "time": 11
+}
