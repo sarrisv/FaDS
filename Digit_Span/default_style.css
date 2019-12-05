@@ -367,3 +367,12 @@ label.jspsych-poldrack-survey-multi-choice-text input[type="radio"] {
 .jspsych-survey-multi-choice-nav {
   padding-top: 20px;
 }
+
+
+.numresponse {
+    font-size: 250%;
+    bottom: 10px;
+    position: relative;
+    color: blue;
+}
+

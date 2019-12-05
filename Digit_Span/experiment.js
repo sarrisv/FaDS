@@ -75,10 +75,14 @@ var getFeedback = function() {
 
 var recordClick = function(elm) {
   response.push(Number($(elm).text()))
+  el_resp = document.getElementById('response_feedback')
+  el_resp.innerHTML = response.join("")
 }
 
 var clearResponse = function() {
   response = []
+  el_resp = document.getElementById('response_feedback')
+  el_resp.innerHTML = response.join("")
 }
 
 
@@ -108,6 +112,7 @@ var stim_array = getStims()
 
 var response_grid =
   '<div class = numbox>' +
+  '<div class = "numresponse" id = "response_feedback"></div>' +
   '<button id = button_1 class = "square num-button" onclick = "recordClick(this)"><div class = content><div class = numbers>1</div></div></button>' +
   '<button id = button_2 class = "square num-button" onclick = "recordClick(this)"><div class = content><div class = numbers>2</div></div></button>' +
   '<button id = button_3 class = "square num-button" onclick = "recordClick(this)"><div class = content><div class = numbers>3</div></div></button>' +
@@ -362,6 +367,7 @@ var feedback_block = {
 
 /* create experiment definition array */
 var digit_span_experiment = [];
+
 digit_span_experiment.push(instruction_node);
 for (i = 0; i < num_trials ; i++ ) {
 	digit_span_experiment.push(start_test_block)
@@ -379,3 +385,4 @@ for (i = 0; i < num_trials ; i++ ) {
 }
 digit_span_experiment.push(post_task_block)
 digit_span_experiment.push(end_block)
+
