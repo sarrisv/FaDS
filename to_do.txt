@@ -1,0 +1,4 @@
+1. Update new digit span instructions
+2. Add slide to all four tasks telling participants to press button to alert study staff and that game is over
+3. Practice trial for digit span
+4. Update wording on willingness to wait
