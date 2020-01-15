@@ -178,7 +178,7 @@ var instructions_block = {
     trial_id: "instruction"
   },
   pages: [
-'<div class = centerbox><p class = block-text>In this test you will have to try to remember a sequence of numbers that will appear on the screen one after the other. At the end of each trial, enter all the numbers into the presented numpad in the sequence in which they occurred. Do your best to memorize the numbers, but do not write them down or use any other external tool to help you remember them.</p><p class = block-text>Trials will start after you end instructions.</p></div>'
+'<div class = centerbox><p class = block-text>In this game you will have to remember a set of numbers that will show up on the screen--one after the other. At the end of each round, enter all the numbers into the numberpad in the same order they were on the screen. Do your best to memorize the numbers, but do not write them down or use anything else to help you remember them.</p></div>'
  ],
   allow_keys: false,
   show_clickable_nav: true,
@@ -214,7 +214,7 @@ var end_block = {
     trial_id: "end",
     exp_id: 'digit_span'
   },
-  text: '<div class = centerbox><p class = center-block-text>Thanks for completing this task!</p><p class = center-block-text>Press <strong>enter</strong> to continue.</p></div>',
+  text: '<div class = centerbox><p class = center-block-text>Good job! You have finished this game! Please press the button on the table to alert the study team member.</p></div>',
   cont_key: [13],
   timing_post_trial: 0
 };

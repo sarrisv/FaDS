@@ -188,7 +188,7 @@ var instructions_block = {
     trial_id: 'instruction'
   },
   pages: [
-    '<div class = centerbox><p class = block-text>In this experiment a coin worth 0&cent; will appear on the screen. After a time it will become a 30&cent; coin. At any point you can collect the coin by pressing the spacebar and moving on to another trial.</p><p class = block-text>Your job is to get as much money as possible in 10 minutes. We will start with a few practice trials which will start after you end instructions.</p></div>'
+    '<div class = centerbox><p class = block-text>In this experiment a coin worth 0&cent; will appear on the screen. After a time it will become a 30&cent; coin. At any point you can collect the coin by pressing the spacebar and moving on to another trial.</p><p class = block-text>Your job is to get as much money as possible in 10 minutes. We will start with a few practice rounds. Press <strong>end instructions</strong> to begin.</p></div>'
   ],
   allow_keys: false,
   show_clickable_nav: true,
@@ -222,7 +222,7 @@ var start_test_block = {
   data: {
     trial_id: 'test_intro'
   },
-  text: '<div class = centerbox><p class = center-block-text>We will now start the main experiment. Press <strong>enter</strong> to begin.</p></div>',
+  text: '<div class = centerbox><p class = center-block-text>We will now start the game. Press <strong>enter</strong> to begin.</p></div>',
   cont_key: [13],
   timing_response: 180000,
   timing_post_trial: 1000,
@@ -320,7 +320,7 @@ var test_node = {
 
 /* create experiment definition array */
 var willingness_to_wait_experiment = [];
-willingness_to_wait_experiment.push(welcome_block);
+//willingness_to_wait_experiment.push(welcome_block);
 willingness_to_wait_experiment.push(instruction_node);
 willingness_to_wait_experiment.push(start_practice_block);
 
