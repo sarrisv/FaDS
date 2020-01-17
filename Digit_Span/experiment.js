@@ -259,7 +259,7 @@ var post_practice_instruction = {
 };
 
 var practice_node = {
-  timeline: [pre_practice_instruction, start_test_block, practice_trial,start_test_block, practice_trial, post_practice_instruction]
+  timeline: [pre_practice_instruction, start_test_block, test_block, practice_trial, start_test_block, feedback_block, test_block, practice_trial, feedback_block, post_practice_instruction ]
 } 
 
 
