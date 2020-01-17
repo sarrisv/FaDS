@@ -207,6 +207,62 @@ var instruction_node = {
   }
 }
 
+var pre_practice_instruction = {
+  type: 'poldrack-instructions',
+  data: {
+    trial_id: "instruction"
+  },
+  pages: [
+  '<div class = centerbox><p class = block-text>You will now play a practice round.</p></div>'
+],
+  allow_keys:false,
+  show_clickable_nav: true,
+  timing_post_trial: 1000
+}; 
+
+
+var practice_trial = {
+  type: 'single-stim-button',
+  stimulus: response_grid,
+  button_class: 'submit_button',
+  data: {
+    trial_id: "response",
+    exp_stage: 'test'
+  },
+  on_finish: function() {
+    var correct = false
+    if (arraysEqual(response, curr_seq)) {
+      feedback = '<span style="color:green">Correct!</span>'
+      stims = setStims()
+      correct = true
+   } else {
+      feedback = '<span style="color:red">Incorrect</span>'
+      stims = setStims()
+  }
+    response = []
+  },
+  timing_post_trial: 500
+}
+
+
+var post_practice_instruction = {
+  type: 'poldrack-instructions',
+  data: {
+    trial_id: "instruction"
+  },
+  pages: [
+  '<div class = centerbox><p class = block-text>You will now play the real game. The game will start after you click <strong>enter</strong></p></div>'
+],
+  allow_keys: false,
+  show_clickable_nav: true,
+  timing_post_trial: 1000
+};
+
+var practice_node = {
+  timeline: [pre_practice_instruction, start_test_block, practice_trial,start_test_block, practice_trial, post_practice_instruction]
+} 
+
+
 var end_block = {
   type: 'poldrack-text',
   timing_response: 180000,
@@ -369,6 +425,7 @@ var feedback_block = {
 var digit_span_experiment = [];
 
 digit_span_experiment.push(instruction_node);
+digit_span_experiment.push(practice_node);
 for (i = 0; i < num_trials ; i++ ) {
 	digit_span_experiment.push(start_test_block)
 	digit_span_experiment.push(test_block)
