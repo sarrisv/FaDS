@@ -134,7 +134,6 @@ var attention_check_block = {
   data: {
     trial_id: "attention_check"
   },
-  timing_response: 180000,
   response_ends_trial: true,
   timing_post_trial: 200
 }
@@ -168,8 +167,7 @@ var feedback_instruct_block = {
     trial_id: "instruction"
   },
   text: getInstructFeedback,
-  timing_post_trial: 0,
-  timing_response: 180000
+  timing_post_trial: 0
 };
 /// This ensures that the subject does not read through the instructions too quickly.  If they do it too quickly, then we will go over the loop again.
 var instructions_block = {
@@ -251,7 +249,7 @@ var post_practice_instruction = {
     trial_id: "instruction"
   },
   pages: [
-  '<div class = centerbox><p class = block-text>You will now play the real game. The game will start after you click <strong>enter</strong></p></div>'
+  '<div class = centerbox><p class = block-text>You will now play the real game. The game will start after you click <strong>End Instructions</strong></p></div>'
 ],
   allow_keys: false,
   show_clickable_nav: true,
@@ -262,7 +260,6 @@ var post_practice_instruction = {
 
 var end_block = {
   type: 'poldrack-text',
-  timing_response: 180000,
   data: {
     trial_id: "end",
     exp_id: 'digit_span'
@@ -288,12 +285,11 @@ var start_test_block = {
 };
 
 var start_reverse_block = {
-  type: 'poldrack-text',
-  timing_response: 180000,
+  type: 'poldrack-text'
   data: {
     trial_id: "start_reverse"
   },
-  text: '<div class = centerbox><p class = block-text>In these next trials, instead of reporting back the sequence you just saw, report the <strong>reverse</strong> of that sequence. So the last item should be first in your response, the second to last should be the second in your response, etc...</p><p class = block-text>Press <strong>enter</strong> to begin.</p></div>',
+  text: '<div class = centerbox><p class = block-text>Now you will be playing a new version of the game. Instead of typing the numbers in the order they appeared on the screen, type them in the opposite order. For example, if 1-2-3 appeared on the screen, you would type 3-2-1 in the numberpad.</p><p class = block-text>Press <strong>enter</strong> to begin.</p></div>',
   cont_key: [13],
   on_finish: function() {
   	errors = 0
