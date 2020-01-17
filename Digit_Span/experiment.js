@@ -285,7 +285,7 @@ var start_test_block = {
 };
 
 var start_reverse_block = {
-  type: 'poldrack-text'
+  type: 'poldrack-text',
   data: {
     trial_id: "start_reverse"
   },
