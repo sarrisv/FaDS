@@ -161,7 +161,7 @@ var end_block = {
     trial_id: 'end',
     exp_id: 'willingness_to_wait'
   },
-  text: '<div class = centerbox><p class = center-block-text>Thanks for completing this task!</p><p class = center-block-text>Press <strong>enter</strong> to continue.</p></div>',
+	text: '<div class = centerbox><p class = center-block-text>Good job! You have finished this game! Please press the button on the table to alert the study team member.</p></div>',
   cont_key: [13],
   timing_response: 180000,
   timing_post_trial: 0,
@@ -237,7 +237,7 @@ var start_practice_block = {
   data: {
     trial_id: 'practice_intro'
   },
-  text: '<div class = centerbox><p class = center-block-text>We will begin with some practice. Press <strong>enter</strong> to begin.</p></div>',
+  text: '<div class = centerbox><p class = center-block-text>We will start with a few practice ​rounds​. Press end instructions to begin.</p></div>',
   cont_key: [13],
   timing_response: 180000,
   timing_post_trial: 1000
@@ -263,6 +263,19 @@ var practice_block = {
     })
   }
 };
+
+var post_practice_instruction = {
+  type: 'poldrack-text',
+  data: {
+    trial_id: 'practice_intro'
+  },
+  text: '<div class = centerbox><p class = center-block-text>You have finished the practice round. Please let your study staff member know</p></div>',
+  cont_key: [13],
+  timing_response: 180000,
+  timing_post_trial: 1000
+};
+
+
 
 /* define test block */
 var test_block = {
@@ -320,14 +333,12 @@ var test_node = {
 
 /* create experiment definition array */
 var willingness_to_wait_experiment = [];
-//willingness_to_wait_experiment.push(welcome_block);
 willingness_to_wait_experiment.push(instruction_node);
-willingness_to_wait_experiment.push(start_practice_block);
-
 for (var i = 0; i < practice_delays.length; i++) {
   willingness_to_wait_experiment.push(practice_block)
   willingness_to_wait_experiment.push(feedback_block)
 }
+willingness_to_wait_experiment.push(post_practice_instruction);
 willingness_to_wait_experiment.push(start_test_block);
 willingness_to_wait_experiment.push(test_node)
 willingness_to_wait_experiment.push(attention_node)

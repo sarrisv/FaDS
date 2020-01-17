@@ -258,9 +258,6 @@ var post_practice_instruction = {
   timing_post_trial: 1000
 };
 
-var practice_node = {
-  timeline: [pre_practice_instruction, start_test_block, test_block, practice_trial, start_test_block, feedback_block, test_block, practice_trial, feedback_block, post_practice_instruction ]
-} 
 
 
 var end_block = {
@@ -425,7 +422,14 @@ var feedback_block = {
 var digit_span_experiment = [];
 
 digit_span_experiment.push(instruction_node);
-digit_span_experiment.push(practice_node);
+digit_span_experiment.push(pre_practice_instruction);
+digit_span_experiment.push(start_test_block);
+digit_span_experiment.push(test_block);
+digit_span_experiment.push(practice_trial);
+digit_span_experiment.push(start_test_block);
+digit_span_experiment.push(test_block);
+digit_span_experiment.push(practice_trial);
+digit_span_experiment.push(post_practice_instruction);
 for (i = 0; i < num_trials ; i++ ) {
 	digit_span_experiment.push(start_test_block)
 	digit_span_experiment.push(test_block)
