@@ -188,7 +188,7 @@ var instructions_block = {
     trial_id: 'instruction'
   },
   pages: [
-    '<div class = centerbox><p class = block-text>In this experiment a coin worth 0&cent; will appear on the screen. After a time it will become a 30&cent; coin. At any point you can collect the coin by pressing the spacebar and moving on to another trial.</p><p class = block-text>Your job is to get as much money as possible in 10 minutes. We will start with a few practice rounds. Press <strong>end instructions</strong> to begin.</p></div>'
+    '<div class = centerbox><p class = block-text>In this experiment a coin worth 0&cent; will appear on the screen. After a time it will become a 30&cent; coin. At any point you can collect the coin by pressing the spacebar and moving on to another trial.</p><p class = block-text>Your job is to get as much money as possible in 10 minutes. We will start with a practice round. Press <strong>end instructions</strong> to begin.</p></div>'
   ],
   allow_keys: false,
   show_clickable_nav: true,
@@ -334,10 +334,10 @@ var test_node = {
 /* create experiment definition array */
 var willingness_to_wait_experiment = [];
 willingness_to_wait_experiment.push(instruction_node);
-for (var i = 0; i < practice_delays.length; i++) {
+//for (var i = 0; i < practice_delays.length; i++) {
   willingness_to_wait_experiment.push(practice_block)
   willingness_to_wait_experiment.push(feedback_block)
-}
+//}
 willingness_to_wait_experiment.push(post_practice_instruction);
 willingness_to_wait_experiment.push(start_test_block);
 willingness_to_wait_experiment.push(test_node)
